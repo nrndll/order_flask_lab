@@ -8,7 +8,7 @@
         {%for order in orders%}
         <div>
             <p>Customer: {{order.customer_name}}</p>
-            <p>Date: {{order.order_date}}</p>
+            <p><a href="orders/{{orders.index(order)}}">Date: {{order.order_date}}</a></p>
             {%if order.quantity == 1%}
                 <p>{{order.quantity}} item</p>
             {%else%}
